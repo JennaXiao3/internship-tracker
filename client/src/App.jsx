@@ -40,6 +40,33 @@ const theme = createTheme({
       primary: "#2F3032",
       secondary: "#C4C4C4",
     },
+    brown: {
+      lightest: "#FAF0E7",
+      light: "#F2DAC4",
+      dark: "#E0A878",
+      darker: "#A4857B",
+      darkest: "#683323",
+    },
+    gray: {
+      lightest: "#FFFFFF",
+      lighter: "#E4E2E0",
+      light: "#8C8C8C",
+      dark: "#D9D9D9",
+      darker: "#021944",
+      darkest: "#000000",
+    },
+    orange: {
+      light: "#ED6A58",
+      dark: "#CE230B",
+    },
+    blue: {
+      dark: "#021944",
+      light: "#0047FF",
+    },
+    green: {
+      light: "#73956F",
+      dark: "#489879",
+    },
   },
   fontsize: "16px",
   typography: {
