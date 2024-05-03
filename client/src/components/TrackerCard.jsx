@@ -1,11 +1,12 @@
-import { Box, Card, Typography } from '@mui/material';
+import { Box, Card, Drawer, Typography } from '@mui/material';
 import { format } from 'date-fns';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { MOCK_INTERNSHIP_DATA } from '../utils/mockData';
 import InternshipCompanyInfo from './InternshipCompanyInfo';
 
 const TrackerCard = ({ id, dateAdded, appliedDate }) => {
+  const [isSlideOpen, setIsSlideOpen] = useState(false);
   const dayjs = require('dayjs');
   const relativeTime = require('dayjs/plugin/relativeTime');
   dayjs.extend(relativeTime);
@@ -15,27 +16,39 @@ const TrackerCard = ({ id, dateAdded, appliedDate }) => {
   });
 
   return (
-    <Card sx={{ p: '1rem', borderRadius: 3, width: '18rem' }}>
-      <InternshipCompanyInfo
-        name={internshipInfo.companyName}
-        title={internshipInfo.position}
-        location={internshipInfo.location}
-        isTracker={true}
-      />
-      <Box display="flex" flexDirection="column" paddingY={1.5}>
-        {internshipInfo.datePosted && (
+    <>
+      <Card
+        onClick={() => setIsSlideOpen(true)}
+        sx={{ p: '1rem', borderRadius: 3, width: '18rem' }}
+      >
+        <InternshipCompanyInfo
+          name={internshipInfo.companyName}
+          title={internshipInfo.position}
+          location={internshipInfo.location}
+          isTracker={true}
+        />
+        <Box display="flex" flexDirection="column" paddingY={1.5}>
+          {internshipInfo.datePosted && (
+            <Typography variant="body3">
+              Posted: {format(internshipInfo.datePosted, 'LLLL d, y')}
+            </Typography>
+          )}
           <Typography variant="body3">
-            Posted: {format(internshipInfo.datePosted, 'LLLL d, y')}
+            Applied: {appliedDate ? format(appliedDate, 'LLLL d, y') : 'No'}
           </Typography>
-        )}
-        <Typography variant="body3">
-          Applied: {appliedDate ? format(appliedDate, 'LLLL d, y') : 'No'}
+        </Box>
+        <Typography variant="body2" textAlign="right">
+          Added {dayjs(dateAdded).fromNow()}
         </Typography>
-      </Box>
-      <Typography variant="body2" textAlign="right">
-        Added {dayjs(dateAdded).fromNow()}
-      </Typography>
-    </Card>
+      </Card>
+      <Drawer
+        anchor="right"
+        open={isSlideOpen}
+        onClose={() => setIsSlideOpen(false)}
+      >
+        <Box sx={{ width: '50rem' }}>hi</Box>
+      </Drawer>
+    </>
   );
 };
 
