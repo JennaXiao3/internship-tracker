@@ -22,6 +22,7 @@ import { getLabelIcon } from '../utils/helper';
 import ConfirmActionModal from './ConfirmActionModal';
 import InternshipCompanyInfo from './InternshipCompanyInfo';
 import InternshipTag from './InternshipTag';
+import JobDescription from './JobDescription';
 import Loading from './Loading';
 import StatusDropdown from './StatusDropdown';
 
@@ -154,7 +155,7 @@ const TrackerDrawer = ({
                     location={internshipInfo.location}
                     isTracker={false}
                   />
-                  <Grid container direction="row" spacing={2} my={3}>
+                  <Grid container direction="row" spacing={2} my={3} pb={3}>
                     {internshipInfo.labels.map((label, idx) => {
                       return (
                         <Grid item key={idx}>
@@ -166,9 +167,13 @@ const TrackerDrawer = ({
                       );
                     })}
                   </Grid>
+                  <JobDescription
+                    description={internshipInfo.jobInfo.jobDesc}
+                    requirements={internshipInfo.jobInfo.jobReqs}
+                    responsibilities={internshipInfo.jobInfo.jobResp}
+                  />
                 </Box>
               </Box>
-
               <Box bgcolor="background.main" padding="1rem 0.8rem 1rem 1.2rem">
                 <Stack
                   direction="row"

@@ -191,8 +191,7 @@ export let mockInternshipData = [
     datePosted: new Date('August 26, 2024'),
     labels: [],
     jobInfo: {
-      jobDesc:
-        'Lorem ipsum dolor sit amet consectetur. Nulla sit integer nec arcu tortor ac lectus morbi non. Quam aenean tincidunt blandit amet magna enim sed pharetra habitasse. At nec neque suspendisse feugiat eros. Ante a arcu donec sodales ut amet luctus mauris. Felis eu mauris fringilla mauris. Viverra ante iaculis gravida a amet cursus facilisis scelerisque. Leo sit nulla sit vel nibh amet justo aliquam. Risus ullamcorper vitae amet ornare adipiscing vulputate dapibus diam ultrices. Arcu malesuada dui integer non. Aliquet non tortor adipiscing laoreet leo ac pretium fusce nisi.',
+      jobDesc: 'Lorem ipsum dolor sit amet consectetur.',
       jobReqs:
         'Vitae consectetur egestas ullamcorper orci pulvinar mattis commodo et morbi.',
       jobResp:
@@ -225,11 +224,9 @@ export let mockInternshipData = [
     ],
     jobInfo: {
       jobDesc:
-        'Lorem ipsum dolor sit amet consectetur. Nulla sit integer nec arcu tortor ac lectus morbi non. Quam aenean tincidunt blandit amet magna enim sed pharetra habitasse. At nec neque suspendisse feugiat eros. Ante a arcu donec sodales ut amet luctus mauris. Felis eu mauris fringilla mauris. Viverra ante iaculis gravida a amet cursus facilisis scelerisque. Leo sit nulla sit vel nibh amet justo aliquam. Risus ullamcorper vitae amet ornare adipiscing vulputate dapibus diam ultrices. Arcu malesuada dui integer non. Aliquet non tortor adipiscing laoreet leo ac pretium fusce nisi.',
-      jobReqs:
-        'Vitae consectetur egestas ullamcorper orci pulvinar mattis commodo et morbi.',
-      jobResp:
-        'Vitae consectetur egestas ullamcorper orci pulvinar mattis commodo et morbi.\n Varius mi massa mi sed cursus mattis. Viverra pharetra vel et neque non ut. ',
+        'Lorem ipsum dolor sit amet consectetur. Nulla sit integer nec arcu tortor ac lectus morbi non.',
+      jobReqs: null,
+      jobResp: null,
       jobLink:
         'https://www.google.com/about/careers/applications/jobs/results/88626154719584966-step-intern-secondyear-student-summer-2024?q=STEP&utm_source=Simplify&ref=Simplify',
     },
